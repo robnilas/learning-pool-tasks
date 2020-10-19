@@ -14,7 +14,7 @@ body{
         }
     }
     .page-footer {
-        background-color: map-get($colors, purple);
+        background-color: map-get($colors,darkblue);
         height: 119px;
         padding: 2em;
     }
@@ -61,7 +61,7 @@ p {
     }
     .usermenu {
         .usertext {
-            color: map-get($colors, darkgrey);
+            color: map-get($colors, dark);
             font-size: map-get($font-size, subheadline);
         }
         .menubar{
@@ -99,24 +99,35 @@ p {
                     font-size: map-get($font-size, topmenu-small);
                 }
                 &.active {
-                    background-color: map-get($colors, purple);
+                    background-color: map-get($colors,darkblue);
                     &>a {
                         border: 1px solid transparent;
                         background-color: transparent;
-                        color: #f5f5f5;
+                        color: map-get($colors, grey);
                         font-weight: map-get($font-weight, bold);
                         letter-spacing: 1px;
+                        &:hover {
+                            border-color: transparent;
+                            color: map-get($colors, grey);
+
+                        }
                     }
                 }
                 &>a{
-                        color:map-get($colors, purple);
+                        color:map-get($colors,darkblue);
                         font-weight: map-get($font-weight, bold);
                         letter-spacing: 1px;
-                        text-transform: uppercase; 
+                        text-transform: uppercase;
+                        @include transition(all .25s ease);
                         @include breakpoint(laptop) {
                             padding-top: 5px;
                             padding-bottom: 5px;
                         }
+                    &:hover{
+                        border-color: transparent;
+                        color: map-get($colors, dark);
+                        
+                    }
                 }
 
             }
@@ -141,6 +152,7 @@ p {
     }
     .bb-anchor {
         padding-bottom: 2em;
+        @include animation(fadein 2s);
     }
     .bb-button {
         background: map-get($colors, turquoise ); 
@@ -157,7 +169,7 @@ p {
                 padding: 1em 1.5em;
 
                 h3 {
-                    color: map-get($colors, purple);
+                    color: map-get($colors,darkblue);
                     padding-bottom: 5px;
 
                     @include breakpoint(tablet) {
@@ -202,11 +214,10 @@ p {
     }
 }
 .page-footer {
-    background-color: map-get($colors, purple);
+    background-color: map-get($colors,darkblue);
     height: 119px;
     padding: 2em;
     .logo {
         max-width: 80px;
     }
 }
-

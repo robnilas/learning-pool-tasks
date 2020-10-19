@@ -27,6 +27,58 @@
     -o-transform: $value;
     -ms-transform: $value;
 }
+@mixin animation($value) {
+    animation: $value;
+    -moz-animation: $value;
+    -webkit-animation: $value;
+    -o-animation: $value;
+    -ms-animation: $value;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 // 
 @mixin breakpoint($point){
     @if $point == mobile {

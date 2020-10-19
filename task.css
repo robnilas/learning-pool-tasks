@@ -1,3 +1,22 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 body {
   background-color: #dcf1f3;
 }
@@ -14,7 +33,7 @@ body .page-wrapper .container {
 }
 
 body .page-footer {
-  background-color: #1e0937;
+  background-color: #1c083b;
   height: 119px;
   padding: 2em;
 }
@@ -69,7 +88,7 @@ p {
 }
 
 .navbar-site .usermenu .usertext {
-  color: #dddddd;
+  color: #666;
   font-size: 1.7rem;
 }
 
@@ -120,7 +139,7 @@ p {
 }
 
 .navbar-site .totara-navbar-container .totara-menu-nav-list .totara-menu-nav-item.active {
-  background-color: #1e0937;
+  background-color: #1c083b;
 }
 
 .navbar-site .totara-navbar-container .totara-menu-nav-list .totara-menu-nav-item.active > a {
@@ -131,11 +150,21 @@ p {
   letter-spacing: 1px;
 }
 
+.navbar-site .totara-navbar-container .totara-menu-nav-list .totara-menu-nav-item.active > a:hover {
+  border-color: transparent;
+  color: #f5f5f5;
+}
+
 .navbar-site .totara-navbar-container .totara-menu-nav-list .totara-menu-nav-item > a {
-  color: #1e0937;
+  color: #1c083b;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
 }
 
 @media screen and (max-width: 768px) {
@@ -143,6 +172,11 @@ p {
     padding-top: 5px;
     padding-bottom: 5px;
   }
+}
+
+.navbar-site .totara-navbar-container .totara-menu-nav-list .totara-menu-nav-item > a:hover {
+  border-color: transparent;
+  color: #666;
 }
 
 @media screen and (max-width: 768px) {
@@ -167,6 +201,11 @@ p {
 
 .block_buttons .bb-anchor {
   padding-bottom: 2em;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s;
+  -ms-animation: fadein 2s;
 }
 
 .block_buttons .bb-button {
@@ -195,7 +234,7 @@ p {
 }
 
 .block_buttons .bb-button .inner .caption-container h3 {
-  color: #1e0937;
+  color: #1c083b;
   padding-bottom: 5px;
 }
 
@@ -252,7 +291,7 @@ p {
 }
 
 .page-footer {
-  background-color: #1e0937;
+  background-color: #1c083b;
   height: 119px;
   padding: 2em;
 }
