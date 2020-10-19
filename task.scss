@@ -1,0 +1,212 @@
+@import './common/varialible';
+@import './common/mixin';
+
+body{
+    background-color: map-get($colors, skyblue);
+    .page-wrapper {
+        max-width: 1190px;
+        margin: auto;
+        border-top: 5px solid map-get($colors, turquoise);
+        background-color: map-get($colors, white);
+
+        .container {
+            background-color: map-get($colors, white);
+        }
+    }
+    .page-footer {
+        background-color: map-get($colors, purple);
+        height: 119px;
+        padding: 2em;
+    }
+    
+}
+
+.h2,
+h2 {
+    font-size: map-get($font-size , headline );
+    letter-spacing: 1px;
+}
+
+.h3,
+h3 {
+    font-size: map-get($font-size, subheadline);
+    letter-spacing: 1px;
+    font-weight: map-get($font-weight, regular );
+}
+
+p{
+    font-size: map-get($font-size, paragraph);
+}
+
+h3,
+p {
+    margin: 0;
+}
+
+.navbar-site {
+    @include borderRadius(0px);
+    background-color: map-get($colors, white);
+    padding: 2em;
+    margin: 0;
+    border: 0;
+    border-top: 5px solid map-get($colors, turquoise);
+    #logo {
+        max-width: 130px;
+        @include breakpoint(laptop) {
+                max-width: 90px;
+        }
+    }
+    .userpicture {
+        border: 2px solid map-get($colors, turquoise);
+    }
+    .usermenu {
+        .usertext {
+            color: map-get($colors, darkgrey);
+            font-size: map-get($font-size, subheadline);
+        }
+        .menubar{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        .toggle-display:hover,
+        .toggle-display:active {
+            text-decoration: none;
+        }
+        }
+    }
+    
+    .totara-navbar-container{
+        border-bottom: 1px solid map-get($colors, darkgrey);
+    .totara-navbar {
+        margin-top: -30px;
+                @include breakpoint(laptop) {
+                    margin-top: -20px;
+                }
+    }
+    .totara-menu-nav-list{
+        min-height: 38px;
+        left: 100% - 90%;
+            padding-left: 30px;
+            padding-right: 30px;
+            .totara-menu-nav-item {
+                background-color: map-get($colors, white);
+                border: 1px solid map-get($colors, darkgrey);
+                border-bottom: 1px solid map-get($colors, white);
+                margin-right: 9px;
+                margin-bottom: -2px;
+                @include breakpoint(laptop)
+                {
+                    font-size: map-get($font-size, topmenu-small);
+                }
+                &.active {
+                    background-color: map-get($colors, purple);
+                    &>a {
+                        border: 1px solid transparent;
+                        background-color: transparent;
+                        color: #f5f5f5;
+                        font-weight: map-get($font-weight, bold);
+                        letter-spacing: 1px;
+                    }
+                }
+                &>a{
+                        color:map-get($colors, purple);
+                        font-weight: map-get($font-weight, bold);
+                        letter-spacing: 1px;
+                        text-transform: uppercase; 
+                        @include breakpoint(laptop) {
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                        }
+                }
+
+            }
+        @include breakpoint(laptop) {
+            min-height: 34px;
+            margin: 0;
+        }
+    }
+
+    }
+}
+
+.block_buttons {
+    background-color: map-get($colors, grey);
+    border-top: 2px solid map-get($colors, darkgrey);
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    .block-title {
+        padding-left: 5px;
+        padding-bottom: 10px;
+    }
+    .bb-anchor {
+        padding-bottom: 2em;
+    }
+    .bb-button {
+        background: map-get($colors, turquoise ); 
+        overflow: hidden;
+        @include boxShadow(4px 4px 8px rgba(85, 85, 85, 0.37));
+        @include transition(all .25s ease);
+        .inner{
+            &>img{
+                @include breakpoint(laptop) {
+                    width: 100%;
+                }
+            }
+            .caption-container {
+                padding: 1em 1.5em;
+
+                h3 {
+                    color: map-get($colors, purple);
+                    padding-bottom: 5px;
+
+                    @include breakpoint(tablet) {
+                        font-size: map-get($font-size, paragraph );
+                    }
+                }
+
+                p {
+                    color: map-get($colors, grey);
+                    letter-spacing: 1px;
+
+                    @include breakpoint(tablet) {
+                        font-size: map-get($font-size, topmenu-small);
+                    }
+                }
+
+                @include breakpoint(tablet) {
+                    padding: 1em 0em 1em 0.5em;
+                }
+            }
+
+            .thin-arrow {
+                padding: 1em 1.5em;
+
+                @include breakpoint(tablet) {
+                    padding: 0.5em;
+                }
+
+                &>.img__thin-arrow {
+                    @include breakpoint(tablet) {
+                        max-width: 12px;
+                    }
+                }
+            }
+        }
+        
+        
+    &:hover{
+        @include boxShadow(0px 0px 0px rgba(85, 85, 85, 0.37));
+        @include transform(scale(1.02));
+    }
+    }
+}
+.page-footer {
+    background-color: map-get($colors, purple);
+    height: 119px;
+    padding: 2em;
+    .logo {
+        max-width: 80px;
+    }
+}
+

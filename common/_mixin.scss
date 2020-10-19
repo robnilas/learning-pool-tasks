@@ -1,0 +1,57 @@
+@mixin boxShadow($value) {
+    box-shadow: $value;
+    -moz-box-shadow: $value;
+    -webkit-box-shadow: $value;
+    -o-box-shadow: $value;
+    -ms-box-shadow: $value;
+}
+@mixin borderRadius($value) {
+    border-radius: $value;
+    -moz-border-radius: $value;
+    -webkit-border-radius: $value;
+    -o-border-radius: $value;
+    -ms-border-radius: $value;
+}
+
+@mixin transition($value) {
+    transition: $value;
+    -moz-transition: $value;
+    -webkit-transition: $value;
+    -o-transition: $value;
+    -ms-transition: $value;
+}
+@mixin transform($value) {
+    transform: $value;
+    -moz-transform: $value;
+    -webkit-transform: $value;
+    -o-transform: $value;
+    -ms-transform: $value;
+}
+// 
+@mixin breakpoint($point){
+    @if $point == mobile {
+        @media screen and (max-width: 320px) {
+            @content;
+        }
+    }
+        @else if $point == tablet {
+            @media screen and (max-width: 998px) {
+                @content;
+            }
+        }
+    @else if $point == laptop {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point == desktop {
+        @media screen and (max-width: 1224px) {
+            @content;
+        }
+    }
+    @else if $point == largescreens {
+        @media screen and (max-width: 1824px) {
+            @content;
+        }
+    }
+}
