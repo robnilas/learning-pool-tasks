@@ -3,7 +3,6 @@
 ![logo](https://res.cloudinary.com/dal7wm9zp/image/upload/v1603100704/learning-pool/learning-pool-icon.png)
 
 ### Introduction
-
 ...
 
 The Learning Pool LMS Learning Management System (LPLMS) is a platform that allows companies and organisations to manage learning content for their staff, and to report on delivery of statutory and mandatory learning. The platform is written in PHP and founded upon the Moodle Open Source LMS.
